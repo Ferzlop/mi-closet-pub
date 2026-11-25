@@ -1,0 +1,6 @@
+# Red de seguridad: nunca subir archivos .env
+**/.env
+node_modules/
+.DS_Store
+
+Claude outputs/

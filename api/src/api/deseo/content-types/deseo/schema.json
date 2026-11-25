@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "deseos",
+  "info": {
+    "singularName": "deseo",
+    "pluralName": "deseos",
+    "displayName": "deseo"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tienda": {
+      "type": "text"
+    },
+    "usuario": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "deseos"
+    },
+    "foto": {
+      "type": "string"
+    }
+  }
+}

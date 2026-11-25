@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "outfits",
+  "info": {
+    "singularName": "outfit",
+    "pluralName": "outfits",
+    "displayName": "outfit"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "superior": {
+      "type": "string"
+    },
+    "inferior": {
+      "type": "string"
+    },
+    "calzado": {
+      "type": "string"
+    },
+    "usuario": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "outfits"
+    },
+    "accesorios": {
+      "type": "string"
+    }
+  }
+}

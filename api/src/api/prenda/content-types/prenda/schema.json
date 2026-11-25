@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prendas",
+  "info": {
+    "singularName": "prenda",
+    "pluralName": "prendas",
+    "displayName": "prenda"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "color": {
+      "type": "string",
+      "required": false
+    },
+    "foto": {
+      "type": "string",
+      "required": false
+    },
+    "categoria": {
+      "type": "string"
+    },
+    "usuario": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "prendas"
+    },
+    "temporadas": {
+      "type": "string"
+    },
+    "marca": {
+      "type": "string"
+    }
+  }
+}
